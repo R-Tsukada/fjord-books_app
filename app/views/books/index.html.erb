@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('activerecord.attributes.book.books') %></h1>
+<h1><%= t(:editing_book) %></h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= t('activerecord.attributes.book.title') %></th>
-      <th><%= t('activerecord.attributes.book.memo') %></th>
-      <th><%= t('activerecord.attributes.book.author') %></th>
-      <th><%= t('activerecord.attributes.book.picture') %></th>
+      <th><%= Book.human_attribute_name(:title) %></th>
+      <th><%= Book.human_attribute_name(:memo) %></th>
+      <th><%= Book.human_attribute_name(:author) %></th>
+      <th><%= Book.human_attribute_name(:picture) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,9 +20,9 @@
         <td><%= book.memo %></td>
         <td><%= book.author %></td>
         <td><%= book.picture %></td>
-        <td><%= link_to t('activerecord.attributes.book.show'), book %></td>
-        <td><%= link_to t('activerecord.attributes.book.edit'), edit_book_path(book) %></td>
-        <td><%= link_to t('activerecord.attributes.book.destroy'), book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:show), book %></td>
+        <td><%= link_to t(:edit), edit_book_path(book) %></td>
+        <td><%= link_to t(:destroy), book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to t('activerecord.attributes.book.new book'), new_book_path %>
+<%= link_to t(:new_book), new_book_path %>
