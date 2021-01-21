@@ -42,5 +42,3 @@ yarn-debug.log*
 
 /public/uploads/*
 .env
-.idea/fjord-books_app.iml
-.idea/workspace.xml
