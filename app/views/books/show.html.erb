@@ -20,5 +20,5 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
-<%= link_to Book.human_attribute_name(:"edit"), edit_book_path(@book) %> |
-<%= link_to Book.human_attribute_name(:"back"), books_path %>
+<%= link_to Book.human_attribute_name(:edit), edit_book_path(@book) %> |
+<%= link_to Book.human_attribute_name(:back), books_path %>
