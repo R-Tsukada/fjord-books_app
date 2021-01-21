@@ -1,6 +1,6 @@
-<h1><%= t(:editing_book) %></h1>
+<h1><%= t('.title') %></h1>
 
 <%= render 'form', book: @book %>
 
-<%= link_to Book.human_attribute_name(:"show"), @book %> |
-<%= link_to Book.human_attribute_name(:"back"), books_path %>
+<%= link_to Book.human_attribute_name(:show), @book %> |
+<%= link_to Book.human_attribute_name(:back), books_path %>

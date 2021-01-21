@@ -1,9 +1,15 @@
 ja:
-  editing_book: 本のリスト
-  edit: 編集
-  destroy: 削除
-  show: 詳細
-  new_book: 新規作成
+  books:
+    index:
+      editing_book: 本のリスト
+      edit: 編集
+      destroy: 削除
+      show: 詳細
+      new_book: 新規作成
+    edit:
+      title: 本の編集
+    new:
+      new_book: 新規作成
   activerecord:
     models:
       editing_book: 本の編集  #g
@@ -13,7 +19,8 @@ ja:
         memo: メモ  #g
         picture: 画像  #g
         title: 題名  #g
-        show: 詳細
         edit: 編集
         destroy: 削除
+        show: 詳細
         back: 戻る
+
