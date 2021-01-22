@@ -1,4 +1,14 @@
 ja:
+  general:
+    show: 詳細
+    edit: 編集
+    destroy: 削除
+    new_book: 本の登録
+    back: 戻る
+    author: 著者
+    picture: 画像
+    title: 題名
+    memo: メモ
   views:
     pagination:
       first: "&laquo; 最初"
@@ -8,25 +18,8 @@ ja:
   books:
     index:
       editing_books: 本のリスト
-      show: 詳細
-      edit: 編集
-      destroy: 削除
-      new_book: 本の登録
-      back: 戻る
-    new:
-      new_book: 本の登録
-      back: 戻る
     edit:
       editing_book: 本の編集
-      show: 詳細
-      back: 戻る
-    show:
-      title: 題名
-      memo: メモ
-      author: 著者
-      picture: 画像
-      edit: 編集
-      back: 戻る
   activerecord:
     models:
       editing_book: 本の編集
