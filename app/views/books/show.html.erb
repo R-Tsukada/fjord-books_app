@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= Book.human_attribute_name(:title) %>:</strong>
+  <strong><%= t('general.title') %>:</strong>
   <%= @book.title %>
 </p>
 
 <p>
-  <strong><%= Book.human_attribute_name(:memo) %>:</strong>
+  <strong><%= t('general.memo') %>:</strong>
   <%= @book.memo %>
 </p>
 
 <p>
-  <strong><%= Book.human_attribute_name(:author) %>:</strong>
+  <strong><%= t('general.author') %>:</strong>
   <%= @book.author %>
 </p>
 
 <p>
-  <strong><%= Book.human_attribute_name(:picture) %>:</strong>
+  <strong><%= t('general.picture') %>:</strong>
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
-<%= link_to Book.human_attribute_name(:edit), edit_book_path(@book) %> |
-<%= link_to Book.human_attribute_name(:back), books_path %>
+<%= link_to t('general.edit'), edit_book_path(@book) %> |
+<%= link_to t('general.back'), books_path %>
