@@ -27,8 +27,7 @@
   <% end %>
   </tbody>
 </table>
-
+<%= paginate @books %>
 <br>
 
 <%= link_to t('general.new_book'), new_book_path %>
-<%= paginate @books %>
