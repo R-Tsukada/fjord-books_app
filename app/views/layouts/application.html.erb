@@ -7,14 +7,14 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <% if I18n.locale.to_s == "en" %>
-    English <%= link_to('日本語', :locale => 'ja') %>
-  <% else %>
-    <%= link_to('English', :locale => 'en') %> 日本語
-  <% end %>
 </head>
 
 <body>
+<% if I18n.locale.to_s == "en" %>
+  English <%= link_to('日本語', :locale => 'ja') %>
+<% else %>
+  <%= link_to('English', :locale => 'en') %> 日本語
+<% end %>
 <%= yield %>
 </body>
 </html>
