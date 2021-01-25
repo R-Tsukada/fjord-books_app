@@ -1,9 +1,5 @@
 ja:
   general:
-    author: 著者
-    memo: メモ
-    picture: 画像
-    title: 題名
     edit: 編集
     destroy: 削除
     show: 詳細
@@ -15,8 +11,6 @@ ja:
     edit:
       editing_book: 本の編集
   activerecord:
-    models:
-      editing_book: 本の編集  #g
     attributes:
       book:
         author: 著者  #g
