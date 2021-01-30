@@ -1,5 +1,11 @@
 ---
 ja:
+  devise:
+    sessions:
+      sign_up: "サンイン"
+      signed_in: "サンインしましした"
+      signed_out: "サンインアウトしました"
+      already_signed_out: "Signed out successfully."
   activerecord:
     errors:
       messages:
