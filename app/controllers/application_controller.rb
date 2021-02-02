@@ -17,7 +17,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    #よくわからない
     added_attrs = [:username, :email, :password, :postal_code,:address,:description,:password_confirmation, :remember_me]
     # サインアップ時にemailのストロングパラメータを追加
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
