@@ -3,10 +3,9 @@
  <table>
    <tr>
      <td><%= user.email %></td>
-     <td><%=link_to "show", user_path(user), class: 'navbar-link' %> </td>
-     <td><%= link_to 'Edit', edit_user_registration_path, class: 'navbar-link' %> </td>
+     <td><%=link_to t('.show'), user_path(user), class: 'navbar-link' %> </td>
    </tr>
  </table>
 <% end %>
-
+<%= paginate @users %>
 <%= link_to t('views.common.back'), books_path %>

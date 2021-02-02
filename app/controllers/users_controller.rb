@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.order(:id).page(params[:page]).per(2)
   end
 
   def show
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def update
     users = User.find(params[:id])
     users.update!(users_params)
-    redirect_to users_url, notice: "User information has been updated."
+    redirect_to users_url, notice: 'User information has been updated.'
   end
 
   private
