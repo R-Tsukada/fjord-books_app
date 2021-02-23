@@ -1,0 +1,19 @@
+ja:
+  general:
+    edit: 編集
+    destroy: 削除
+    show: 詳細
+    new_book: 新規作成
+    back: 戻る
+  books:
+    index:
+      editing_book: 本のリスト
+    edit:
+      editing_book: 本の編集
+  activerecord:
+    attributes:
+      book:
+        author: 著者  #g
+        memo: メモ  #g
+        picture: 画像  #g
+        title: タイトル
