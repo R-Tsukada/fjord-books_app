@@ -1,5 +1,26 @@
 ---
 ja:
+  devise:
+    general:
+      login: "ログイン"
+      sign_up: "アカウント登録"
+      forgot_your_password?: "パスワードを忘れましたか？"
+    shared:
+      links:
+        resend_confirmation_instructions: "確認のメールを再送する"
+    passwords:
+      new:
+        send_me_reset_password_instructions: "パスワード再設定する方法を送信する"
+    registrations:
+      edit:
+        edit: "編集"
+        back: "戻る"
+        update: "更新する"
+        cancel_my_account: "キャンセルする"
+        email: "メール"
+        postal_code: "郵便番号"
+        address: "住所"
+        description: "自己紹介文"
   activerecord:
     errors:
       messages:
@@ -206,6 +227,17 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   views:
+    Logged_in_as: "ログインユーザー"
+    edit_profile: "ユーザー情報を変更"
+    logout: "ログアウト"
+    user_list: "ユーザー一覧"
+    login: "ログイン"
+    sign_up: "アカウント登録"
+    user_profile: "ユーザープロフィール"
+    email: "メール"
+    postal_code: "郵便番号"
+    address: "住所"
+    description: "自己紹介文"
     common:
       show: 詳細
       edit: 編集

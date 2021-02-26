@@ -1,0 +1,11 @@
+<h1><%= t('views.user_list') %></h1>
+<% @users.each do |user| %>
+ <table>
+   <tr>
+     <td><%= user.email %></td>
+     <td><%=link_to t('views.common.show'), user_path(user), class: 'navbar-link' %> </td>
+   </tr>
+ </table>
+<% end %>
+<%= paginate @users %>
+<%= link_to t('views.common.back'), books_path %>

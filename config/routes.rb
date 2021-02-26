@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  resources :books
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+  scope '(:locale)' do
+    resources :books
+    resources :users
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

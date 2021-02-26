@@ -1,0 +1,6 @@
+<h1><%= t("views.user_profile") %></h1>
+<p><%= t("views.email") %>: <%= @users.email %></p>
+<p><%= t("views.postal_code") %>: <%= @users.postal_code %></p>
+<p><%= t("views.address") %>: <%= @users.address %></p>
+<p><%= t("views.description") %>: <%= @users.description %></p>
+<%= link_to t('views.common.back'), users_path %>
