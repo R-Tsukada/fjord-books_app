@@ -32,6 +32,7 @@
         </ul>
       </div>
     <% end %>
+    <%= link_to 'GitHubでログイン', user_github_omniauth_authorize_path, method: :post %>
     <%= yield %>
   </body>
 </html>
