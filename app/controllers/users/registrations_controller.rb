@@ -2,17 +2,18 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   protected
+
   def update_resource(resource, params)
     resource.update_without_password(params)
   end
 
-  #def updated_resource(resource, params)
+  # def updated_resource(resource, params)
   # if params[:password].present? && params[:password_confirmation].present?
   #   resource.update_attributes(params)
   #  else
   #    resource.update_without_password(params)
   #  end
-  #end
+  # end
 
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
