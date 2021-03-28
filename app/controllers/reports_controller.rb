@@ -24,7 +24,9 @@ class ReportsController < ApplicationController
   # POST /reports
   # POST /reports.json
   def create
-    @report = Report.new(report_params)
+    # ↓user入力のバリデーションが表示される
+    #@report = Report.new(report_params)
+    @report = current_user.reports.new(report_params)
 
     respond_to do |format|
       if @report.save
