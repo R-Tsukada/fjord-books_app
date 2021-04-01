@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[github]
 
-  has_many :active_relationships, class_name: 'Relationship', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
+  has_many :active_relationships, class_name: 'RelationshipBetweenUser', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
   has_many :following, through: :active_relationships, source: :following
-  has_many :passive_relationships, class_name: 'Relationship', foreign_key: 'following_id', dependent: :destroy, inverse_of: :following
+  has_many :passive_relationships, class_name: 'RelationshipBetweenUser', foreign_key: 'following_id', dependent: :destroy, inverse_of: :following
   has_many :followers, through: :passive_relationships, source: :follower
 
   has_one_attached :avatar
@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def follow(other_user)
-    active_relationships.create!(following_id: other_user.id)
+    active_relationships.find_or_create_by!(following_id: other_user.id)
   end
 
   def unfollow(other_user)
@@ -31,6 +31,6 @@ class User < ApplicationRecord
   end
 
   def following?(other_user)
-    following.include?(other_user)
+    active_relationships.where(following_id: other_user.id).exists?
   end
 end
