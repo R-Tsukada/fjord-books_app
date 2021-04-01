@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[github]
 
-  has_many :active_relationships, class_name: 'RelationshipBetweenUser', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
+  has_many :active_relationships, class_name: 'Friendship', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
   has_many :following, through: :active_relationships, source: :following
-  has_many :passive_relationships, class_name: 'RelationshipBetweenUser', foreign_key: 'following_id', dependent: :destroy, inverse_of: :following
+  has_many :passive_relationships, class_name: 'Friendship', foreign_key: 'following_id', dependent: :destroy, inverse_of: :following
   has_many :followers, through: :passive_relationships, source: :follower
 
   has_one_attached :avatar
