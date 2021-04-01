@@ -1,0 +1,11 @@
+<%= form_with(model: [commentable, Comment.new], locale: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
