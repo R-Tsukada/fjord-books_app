@@ -20,7 +20,7 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
-<h2>Comment</h2>
+<h2><%= Comment.model_name.human %></h2>
 
 <%= render partial: "comments/comments", locals: {commentable: @book} %>
 <%= render partial: "comments/form", locals: {commentable: @book} %>
