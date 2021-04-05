@@ -9,8 +9,8 @@
   </thead>
 
   <tbody>
-  <% if commentable.comments.present? %>
-    <% commentable.comments.each do |comment| %>
+  <% if commentable.comment.present? %>
+    <% commentable.comment.each do |comment| %>
       <tr>
         <td><%= comment.user.name %></td>
         <td><%= comment.body %></td>
