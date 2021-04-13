@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     @comment = @commentable.comment.new comment_params
     @comment.user = current_user
     if @comment.save
-      redirect_to @commentable, notice: 'Your comment was successfully posted'
+      redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
     else
       render :edit
     end
