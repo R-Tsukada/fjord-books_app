@@ -1,17 +1,11 @@
 # frozen_string_literal: true
 
 class Books::CommentsController < CommentsController
-  def create
-    book = Book.find(params[:book_id])
-    comment = book.comment.build(comment_params)
-    comment.user = current_user
-    comment.save!
-    redirect_to book
-  end
+  before_action :set_commentable
 
   private
 
-  def comment_params
-    params.require(:comment).permit(:body)
+  def set_commentable
+    @commentable = Book.find(params[:book_id])
   end
 end

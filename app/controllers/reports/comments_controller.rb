@@ -1,17 +1,11 @@
 # frozen_string_literal: true
 
 class Reports::CommentsController < CommentsController
-  def create
-    report = Report.find(params[:report_id])
-    comment = report.comment.build(comment_params)
-    comment.user = current_user
-    comment.save!
-    redirect_to report
-  end
+  before_action :set_commentable
 
   private
 
-  def comment_params
-    params.require(:comment).permit(:body)
+  def set_commentable
+    @commentable = Report.find(params[:report_id])
   end
 end
