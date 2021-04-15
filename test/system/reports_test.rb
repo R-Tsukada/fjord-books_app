@@ -6,7 +6,6 @@ class ReportsTest < ApplicationSystemTestCase
   setup do
     @report = reports(:alice_report)
 
-    #sign_in_as(:user)
     visit root_url
     fill_in 'Eメール', with: 'aaa@example.com'
     fill_in 'パスワード', with: 'password'
