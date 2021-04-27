@@ -1,0 +1,24 @@
+<table>
+  <thead>
+  <tr>
+    <th><%= Comment.human_attribute_name(:user) %></th>
+    <th><%= Comment.human_attribute_name(:text) %></th>
+    <th><%= Comment.human_attribute_name(:created_at) %></th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% if commentable.comment.present? %>
+    <% commentable.comment.each do |comment| %>
+      <tr>
+        <td><%= comment.user.name %></td>
+        <td><%= comment.body %></td>
+        <td><%= l comment.created_at, format: :long %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  <% else %>
+    "コメントがありません"
+  <% end %>
+</table>
