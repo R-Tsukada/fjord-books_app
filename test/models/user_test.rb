@@ -3,15 +3,15 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  test "#name_or_email" do
+  test '#name_or_email' do
     user = User.new(email: 'foo@example.com', name: '')
     assert_equal 'foo@example.com', user.name_or_email
 
-    user.name = "foo bar"
+    user.name = 'foo bar'
     assert_equal 'foo bar', user.name_or_email
   end
 
-  test "#following?" do
+  test '#following?' do
     alice = users(:alice)
     bob = users(:bob)
 
@@ -20,7 +20,7 @@ class UserTest < ActiveSupport::TestCase
     assert bob.followed_by?(alice)
   end
 
-  test "#follow" do
+  test '#follow' do
     carol = users(:carol)
     dave = users(:dave)
 
@@ -30,7 +30,7 @@ class UserTest < ActiveSupport::TestCase
     assert carol.following?(dave)
   end
 
-  test "#unfollow" do
+  test '#unfollow' do
     ellen = users(:ellen)
     frank = users(:frank)
 
